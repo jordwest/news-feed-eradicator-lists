@@ -2,7 +2,7 @@ export type SiteList = {
 	schemaVersion: 1,
 	/** Git commit hash the list was built from */
 	commit: string,
-	/** UTC build time, formatted `YYYYMMDD_HHMM` (e.g. `20261113_2314`) */
+	/** UTC build time, formatted `YYYYMMDD_HHMMSS` (e.g. `20261113_231401`) */
 	buildTimestamp: string,
 	sites: Site[]
 };

@@ -12,7 +12,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
+    "@date-fns/utc": "^2.1.1",
     "@types/node": "^26.6.6",
+    "date-fns": "^4.4.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }

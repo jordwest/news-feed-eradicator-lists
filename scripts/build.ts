@@ -1,3 +1,5 @@
+import { UTCDate } from "@date-fns/utc";
+import { format } from "date-fns";
 import { execSync } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -11,11 +13,8 @@ const getCommit = (): string => {
 	return execSync("git rev-parse HEAD", { encoding: "utf8" }).trim();
 };
 
-// UTC, formatted YYYYMMDD_HHMM
-const getBuildTimestamp = (): string => {
-	const iso = new Date().toISOString(); // 2026-11-13T23:14:05.123Z
-	return `${iso.slice(0, 10).replaceAll("-", "")}_${iso.slice(11, 16).replace(":", "")}`;
-};
+// UTC, formatted YYYYMMDD_HHMMSS
+const getBuildTimestamp = (): string => format(new UTCDate(), "yyyyMMdd_HHmmss");
 
 const commit = getCommit();
 const buildTimestamp = getBuildTimestamp();

@@ -8,9 +8,15 @@ importers:
 
   .:
     devDependencies:
+      '@date-fns/utc':
+        specifier: ^2.1.1
+        version: 2.1.1
       '@types/node':
         specifier: ^26.6.6
         version: 26.6.6
+      date-fns:
+        specifier: ^4.4.0
+        version: 4.4.0
       tsx:
         specifier: ^4.23.15
         version: 4.23.15
@@ -19,6 +25,9 @@ importers:
         version: 7.0.2
 
 packages:
+
+  '@date-fns/utc@2.1.1':
+    resolution: {integrity: sha512-SlJDfG6RPeEX8wEVv6ZB3kak4MmbtyiI2qX/5zuKdordbrhB/iaJ58GVMZgJ6P1sJaM1gMgENFYYeg1JWrCFrA==}
 
   '@esbuild/aix-ppc64@0.28.2':
     resolution: {integrity: sha512-XExcO+dvLKvVtNTibSTBej1NCAbaGhWn9Ww1ZPx80qsahhPFe/8jgWP0IchNe0F3HwkU7n8ejhH8bjonqht8mQ==}
@@ -299,6 +308,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  date-fns@4.4.0:
+    resolution: {integrity: sha512-+1UMbeh68lH1SegH83CGWwpb6OHHbpSgr3+s5Eww5M4CAgswBpoWS0AjTOfEJ33HiYKz1hdj/KTFprzXHmq/6w==}
+
   esbuild@0.28.2:
     resolution: {integrity: sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA==}
     engines: {node: '>=18'}
@@ -323,6 +335,8 @@ packages:
     resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
 snapshots:
+
+  '@date-fns/utc@2.1.1': {}
 
   '@esbuild/aix-ppc64@0.28.2':
     optional: true
@@ -465,6 +479,8 @@ snapshots:
 
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
+
+  date-fns@4.4.0: {}
 
   esbuild@0.28.2:
     optionalDependencies:
