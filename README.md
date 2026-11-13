@@ -4,7 +4,7 @@ This repository contains [News Feed Eradicator](https://github.com/jordwest/news
 
 If a site is broken and no longer eradicating, this is the repository to change.
 
-Commits to the `main` branch build the configuration and make it available at [https://jordwest.github.io/news-feed-eradicator-lists/sitelist.json](https://jordwest.github.io/news-feed-eradicator-lists/sitelist.json).
+Commits to the `main` branch build the configuration and make it available at [https://jordwest.github.io/news-feed-eradicator-lists/sitelist.json](https://jordwest.github.io/news-feed-eradicator-lists/sitelist.json). A [`manifest.json`](https://jordwest.github.io/news-feed-eradicator-lists/manifest.json) is also published to allow update checks without fetching the full sitelist.
 
 Currently these are bundled in to News Feed Eradicator on each release, but in future the plan is to dynamically fetch them for faster updates when a site breaks.
 
