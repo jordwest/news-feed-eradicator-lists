@@ -1,6 +1,6 @@
-import type { SiteList } from "../types/sitelist"
+import type { SiteListSource } from "../types/sitelist"
 
-const sitelist: SiteList = {
+const sitelist: SiteListSource = {
 	schemaVersion: 1,
 	sites: [
 		(await import('./facebook')).default,
