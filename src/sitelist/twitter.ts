@@ -12,6 +12,9 @@ export const site: Site = {
 					type: 'hide',
 					paths: 'inherit',
 					selectors: [
+						// New X web app (late 2026): no data-testid attributes; timelines are rendered inside a div with id "urt:<timeline>"
+						'main section[aria-labelledby]:has([id^="urt:"])',
+						// Legacy X web app
 						'div[data-testid="primaryColumn"] > div > div > section[role="region"]',
 						'div[aria-label="Home timeline"] > div > section[role="region"]', // Fallback but only works if X is set to English
 					],
@@ -25,7 +28,8 @@ export const site: Site = {
 					type: 'remove',
 					paths: ['/explore'],
 					selectors: [
-					'div[data-testid="primaryColumn"] div[data-testid="cellInnerDiv"]:has(article[data-testid="tweet"])',
+						'main li[data-index]:has(article)',
+						'div[data-testid="primaryColumn"] div[data-testid="cellInnerDiv"]:has(article[data-testid="tweet"])',
 					],
 				},
 				{
@@ -34,6 +38,7 @@ export const site: Site = {
 					type: 'remove',
 					paths: '*',
 					selectors: [
+						'aside section:has(a[href^="/i/trending/"])',
 						'div:has(> div[data-testid="news_sidebar"])',
 						'div:has(> div[data-testid^="news_sidebar_article_"])'
 					],
@@ -44,6 +49,7 @@ export const site: Site = {
 					type: 'remove',
 					paths: '*',
 					selectors: [
+						'aside section:has([id^="urt:explore-sidebar"])',
 						'section:has(div[aria-label="Timeline: Trending now"])',
 						'div[aria-label="Timeline: Trending now"]'
 					],
